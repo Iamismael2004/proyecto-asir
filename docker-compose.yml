@@ -1,0 +1,10 @@
+services:
+  web:
+    container_name: proyecto-server-web
+    build: 
+      context: ./server-web
+      dockerfile: Dockerfile
+    ports:
+      - "${PUERTO_HTTP}:80"
+      - "${PUERTO_HTTPS}:443"
+    restart: unless-stopped
