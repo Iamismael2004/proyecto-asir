@@ -8,3 +8,11 @@ services:
       - "${PUERTO_HTTP}:80"
       - "${PUERTO_HTTPS}:443"
     restart: unless-stopped
+  ftp:
+    container_name: proyecto-server-ftp
+    build:
+      context: ./server-ftp
+      dockerfile: Dockerfile
+    ports:
+      - "${PUERTO_FTP}:21"
+    restart: unless-stopped
