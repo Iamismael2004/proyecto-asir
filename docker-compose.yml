@@ -7,6 +7,8 @@ services:
     ports:
       - "${PUERTO_HTTP}:80"
       - "${PUERTO_HTTPS}:443"
+    volumes:
+      - ./pagina_web:/usr/share/nginx/pagina_web
     restart: unless-stopped
   ftp:
     container_name: proyecto-server-ftp
