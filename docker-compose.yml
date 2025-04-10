@@ -5,8 +5,8 @@ services:
       context: ./server-web
       dockerfile: Dockerfile
     ports:
-      - "${PUERTO_HTTP}:80"
-      - "${PUERTO_HTTPS}:443"
+      - "${PUERTO_HTTP:-8080}:80"
+      - "${PUERTO_HTTPS:-8443}:443"
     volumes:
       - ./pagina_web:/usr/share/nginx/pagina_web
     restart: unless-stopped
@@ -16,5 +16,21 @@ services:
       context: ./server-ftp
       dockerfile: Dockerfile
     ports:
-      - "${PUERTO_FTP}:21"
+      - "${PUERTO_FTP:-2121}:21"
     restart: unless-stopped
+  postgres:
+    container_name: proyecto-server-db
+    image: postgres:17.4-alpine3.21
+    ports:
+      - "${PUERTO_DB:-5432}:5432"
+    environment:
+      POSTGRES_USER: ${DB_POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_POSTGRES_DB:-postgres}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
