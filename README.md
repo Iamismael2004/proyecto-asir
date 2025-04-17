@@ -20,6 +20,8 @@
 - - /bin/sh o /bin/bash (algunos contenedores no traen bash dentro)
 - Para ver logs generales de un contenedor:
 `docker logs <IDENTIFICADOR_CONTENEDOR>`
+- Para eliminar cosas (imagenes, contenedores, volumenes, etc) que no este usando docker:
+`docker system prune -a`
 
 ## Autores
-- Ismael Ahumadamar
+- Ismael Ahumada
