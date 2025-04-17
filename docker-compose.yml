@@ -10,6 +10,7 @@ services:
     volumes:
       - ./pagina_web:/usr/share/nginx/pagina_web
     restart: unless-stopped
+
   ftp:
     container_name: proyecto-server-ftp
     build:
@@ -18,6 +19,7 @@ services:
     ports:
       - "${PUERTO_FTP:-2121}:21"
     restart: unless-stopped
+
   postgres:
     container_name: proyecto-server-db
     image: postgres:17.4-alpine3.21
@@ -31,6 +33,34 @@ services:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  ldap:
+    image: osixia/openldap:1.5.0
+    container_name: proyecto-server-ldap
+    environment:
+      LDAP_ORGANISATION: ${LDAP_ORG}
+      LDAP_DOMAIN: ${LDAP_DOMAIN}
+      LDAP_BASE_DN: ${LDAP_BASE_DN}
+      LDAP_ADMIN_PASSWORD: ${LDAP_ADMIN_PASS}
+    volumes:
+      - ldap_data:/var/lib/ldap
+      - ldap_config:/etc/ldap/slapd.d
+    ports:
+      - "${PUERTO_LDAP_TLS:-389}:389"
+      - "${PUERTO_LDAP_SSL:-686}:686"
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    container_name: proyecto-ldap-ui
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap
+      - PHPLDAPADMIN_HTTPS=false
+    ports:
+      - "${PUERTO_LDAP_UI:-9090}:80"
+    depends_on:
+      - ldap
+
 
 volumes:
   postgres_data:
+  ldap_data:
+  ldap_config:
