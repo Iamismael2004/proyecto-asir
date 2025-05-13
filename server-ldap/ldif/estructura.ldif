@@ -1,4 +1,4 @@
-ESTRUCTURA COLEGIO:
+# ESTRUCTURA COLEGIO:
 # UnidadOrganizativa personal
 dn: ou=personal,dc=sansebastian,dc=local
 objectclass: organizationalUnit

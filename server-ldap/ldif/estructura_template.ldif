@@ -1,4 +1,4 @@
-ESTRUCTURA COLEGIO:
+# ESTRUCTURA COLEGIO:
 # UnidadOrganizativa personal
 dn: ou=personal,${LDAP_BASE_DN}
 objectclass: organizationalUnit
