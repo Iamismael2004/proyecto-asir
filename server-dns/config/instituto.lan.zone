@@ -10,8 +10,8 @@ $ORIGIN instituto.lan.
                                 )
 @           IN      NS      ns1.instituto.lan.
 
-ns1		    IN      A	    192.168.1.100
+ns1		    IN      A	    10.0.2.10
 
 ; Main VLAN network services
-router		IN		A		192.168.1.1
-impresora   IN      A       192.168.1.200
+router		IN		A		10.0.2.2
+impresora   IN      A       10.0.2.25

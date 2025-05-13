@@ -40,7 +40,7 @@ Lanzar configurar.sh
 
 ### Comprobar resolucion DNS
 nslookup name_to_search dns_ip_server
-nslookup impresora.instituto.lan 192.168.1.100
+nslookup impresora.instituto.lan 10.0.2.10
 
 ### Creacion de usuarios
 Cuando se cree un usuario en ldap, debemos crear su usuario en ftp

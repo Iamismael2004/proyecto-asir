@@ -83,7 +83,7 @@ services:
       DB_USER: postgres
       DB_PASS: postgres
       DB_PREFIX: mdl_
-      SITE_URL: ${URL_IP_MOODLE:-http://192.168.1.100}
+      SITE_URL: ${URL_IP_MOODLE:-http://10.0.2.10}
     ports:
       - 80:8080
     volumes:
