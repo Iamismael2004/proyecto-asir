@@ -1,15 +1,30 @@
 # Proyecto ASIR
 
 ## Descripcion
-- Pendiente de completar...
 
 ## Instrucciones
+Ir a config.env y adaptar variables
+Revisar dhcpd.conf
+Revisar ficheros dns (named conf y zone)
+
+Lanzar configurar.sh
+
+## Comandos docker compose
+
 - Para lanzar todos los contenedores con docker compose (sustituir config.env) por el fichero que queramos...
 `docker compose --env-file config.env up -d`
 
 - Para pararlo
 `docker compose down`
 
+## Arrancar
+`./lanzar.sh`
+
+## Parar
+`./parar.sh`
+
+### Utilidades LDAP
+- Para generar un fichero de estructura de usuarios, grupos, etc (se puede usar la plantilla base estructura_template.ldif)
 
 ### Comandos utiles docker
 - Para listar los contenedores corriendo
@@ -22,6 +37,15 @@
 `docker logs <IDENTIFICADOR_CONTENEDOR>`
 - Para eliminar cosas (imagenes, contenedores, volumenes, etc) que no este usando docker:
 `docker system prune -a`
+
+### Comprobar resolucion DNS
+nslookup name_to_search dns_ip_server
+nslookup impresora.instituto.lan 192.168.1.100
+
+### Creacion de usuarios
+Cuando se cree un usuario en ldap, debemos crear su usuario en ftp
+Podemos usar el script crear_usuario_ftp.sh
+`./crear_usuario_ftp.sh <nombre_usuario>`
 
 ## Autores
 - Ismael Ahumada

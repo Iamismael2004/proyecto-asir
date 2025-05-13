@@ -1,0 +1,17 @@
+$TTL 2d
+$ORIGIN instituto.lan.
+
+@           IN      SOA     ns1.instituto.lan admin.instituto.lan (
+                                20230218		; serial number
+                                3600			; refresh period
+                                600			    ; retry period
+                                604800			; expire time
+                                1800 			; negative TTL
+                                )
+@           IN      NS      ns1.instituto.lan.
+
+ns1		    IN      A	    192.168.1.100
+
+; Main VLAN network services
+router		IN		A		192.168.1.1
+impresora   IN      A       192.168.1.200

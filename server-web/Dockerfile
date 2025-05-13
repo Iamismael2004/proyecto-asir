@@ -1,5 +1,5 @@
 # Usa la imagen oficial de Nginx como base
-FROM nginx:1.27.4-alpine
+FROM axistools/nginx-ldap:1.27.5-alpine
 
 # Crear el directorio donde se alojará la web
 RUN mkdir -p /usr/share/nginx/pagina_web

@@ -1,0 +1,266 @@
+ESTRUCTURA COLEGIO:
+# UnidadOrganizativa personal
+dn: ou=personal,dc=sansebastian,dc=local
+objectclass: organizationalUnit
+objectclass: top
+ou: personal
+
+# Grupo direccion
+dn: cn=direccion,ou=personal,dc=sansebastian,dc=local
+cn: direccion
+gidnumber: 500
+objectclass: posixGroup
+objectclass: top
+
+# Grupo secretaria
+dn: cn=secretaria,ou=personal,dc=sansebastian,dc=local
+cn: secretaria
+gidnumber: 501
+objectclass: posixGroup
+objectclass: top
+
+# Grupo profesorado
+dn: cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: profesorado
+gidnumber: 502
+objectclass: posixGroup
+objectclass: top
+
+# Grupo alumnado
+dn: cn=alumnado,ou=personal,dc=sansebastian,dc=local
+cn: alumnado
+gidnumber: 503
+objectclass: posixGroup
+objectclass: top
+
+# Miembro de direccion
+dn: cn=Sheyla_Martinez,cn=direccion,ou=personal,dc=sansebastian,dc=local
+cn: Sheyla_Martinez
+gidnumber: 500
+givenname: Sheyla
+homedirectory: /home/users/sheyla_martinez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Martinez
+uid: sheyla_martinez
+uidnumber: 1000
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: sheyla_martinez@sansebastian.local
+
+# Miembro de secretaria
+dn: cn=Victor_Jimenez,cn=secretaria,ou=personal,dc=sansebastian,dc=local
+cn: Victor_Jimenez
+gidnumber: 501
+givenname: Victor
+homedirectory: /home/users/victor_jimenez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Jimenez
+uid: victor_jimenez
+uidnumber: 1001
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: victor_jimenez@sansebastian.local
+
+# Profesorado
+
+dn: cn=Daniel_Torres,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Daniel_Torres
+gidnumber: 502
+givenname: Daniel
+homedirectory: /home/users/daniel_torres
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Torres
+uid: daniel_torres
+uidnumber: 1002
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: daniel_torres@sansebastian.local
+
+dn: cn=Ismael_Rodriguez,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Ismael_Rodriguez
+gidnumber: 502
+givenname: Ismael
+homedirectory: /home/users/ismael_rodriguez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Rodriguez
+uid: ismael_rodriguez
+uidnumber: 1003
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: ismael_rodriguez@sansebastian.local
+
+dn: cn=Jimenez_Lopez,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Jimenez_Lopez
+gidnumber: 502
+givenname: Jimenez
+homedirectory: /home/users/jimenez_lopez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Lopez
+uid: jimenez_lopez
+uidnumber: 1004
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: jimenez_lopez@sansebastian.local
+
+dn: cn=Carla_Sanchez,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Carla_Sanchez
+gidnumber: 502
+givenname: Carla
+homedirectory: /home/users/carla_sanchez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Sanchez
+uid: carla_sanchez
+uidnumber: 1005
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: carla_sanchez@sansebastian.local
+
+dn: cn=Felipe_Morales,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Felipe_Morales
+gidnumber: 502
+givenname: Felipe
+homedirectory: /home/users/felipe_morales
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Morales
+uid: felipe_morales
+uidnumber: 1006
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: felipe_morales@sansebastian.local
+
+dn: cn=Mariana_Diaz,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Mariana_Diaz
+gidnumber: 502
+givenname: Mariana
+homedirectory: /home/users/mariana_diaz
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Diaz
+uid: mariana_diaz
+uidnumber: 1007
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: mariana_diaz@sansebastian.local
+
+dn: cn=Valeria_Gomez,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Valeria_Gomez
+gidnumber: 502
+givenname: Valeria
+homedirectory: /home/users/valeria_gomez
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Gomez
+uid: valeria_gomez
+uidnumber: 1008
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: valeria_gomez@sansebastian.local
+
+dn: cn=Andres_Ruiz,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Andres_Ruiz
+gidnumber: 502
+givenname: Andres
+homedirectory: /home/users/andres_ruiz
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Ruiz
+uid: andres_ruiz
+uidnumber: 1009
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: andres_ruiz@sansebastian.local
+
+dn: cn=Jorge_Puras,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Jorge_Puras
+gidnumber: 502
+givenname: Jorge
+homedirectory: /home/users/jorge_puras
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Puras
+uid: jorge_puras
+uidnumber: 1010
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: jorge_puras@sansebastian.local
+
+dn: cn=Francisco_Martin,cn=profesorado,ou=personal,dc=sansebastian,dc=local
+cn: Francisco_Martin
+gidnumber: 502
+givenname: Francisco
+homedirectory: /home/users/francisco_martin
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Martin
+uid: francisco_martin
+uidnumber: 1011
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: francisco_martin@sansebastian.local
+
+# Alumno 1
+dn: cn=Lucia_Ramos,cn=alumnado,ou=personal,dc=sansebastian,dc=local
+cn: Lucia_Ramos
+gidnumber: 503
+givenname: Lucia
+homedirectory: /home/users/lucia_ramos
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Ramos
+uid: lucia_ramos
+uidnumber: 2000
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: lucia_ramos@sansebastian.local
+
+# Alumno 2
+dn: cn=Mateo_Garcia,cn=alumnado,ou=personal,dc=sansebastian,dc=local
+cn: Mateo_Garcia
+gidnumber: 503
+givenname: Mateo
+homedirectory: /home/users/mateo_garcia
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Garcia
+uid: mateo_garcia
+uidnumber: 2001
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: mateo_garcia@sansebastian.local
+
+# Alumna 3
+dn: cn=Sofia_Navarro,cn=alumnado,ou=personal,dc=sansebastian,dc=local
+cn: Sofia_Navarro
+gidnumber: 503
+givenname: Sofia
+homedirectory: /home/users/sofia_navarro
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Navarro
+uid: sofia_navarro
+uidnumber: 2002
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: sofia_navarro@sansebastian.local
+
+# Alumno 4
+dn: cn=Diego_Molina,cn=alumnado,ou=personal,dc=sansebastian,dc=local
+cn: Diego_Molina
+gidnumber: 503
+givenname: Diego
+homedirectory: /home/users/diego_molina
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: top
+sn: Molina
+uid: diego_molina
+uidnumber: 2003
+userpassword: {MD5}gdyb21LQTcIANtvYMT7QVQ==
+mail: diego_molina@sansebastian.local
